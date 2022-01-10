@@ -6,7 +6,7 @@ const Header = () => {
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
-          Organic Shop
+          Gal Organic Shop
         </Link>
         <button
           className="navbar-toggler"
@@ -24,6 +24,11 @@ const Header = () => {
             <li className="nav-item">
               <Link className="nav-link" to="/shopping-cart">
                 Shoping Cart
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/login">
+                Login
               </Link>
             </li>
             <li className="nav-item dropdown">
