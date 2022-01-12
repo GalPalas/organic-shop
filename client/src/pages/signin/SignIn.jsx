@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -23,11 +23,11 @@ const SignIn = () => {
 
   const onSubmit = (data) => console.log(data);
 
-  const [loginData, setLoginData] = useState(
-    localStorage.getItem("loginData")
-      ? JSON.parse(localStorage.getItem("loginData"))
-      : null
-  );
+  // const [loginData, setLoginData] = useState(
+  //   localStorage.getItem("loginData")
+  //     ? JSON.parse(localStorage.getItem("loginData"))
+  //     : null
+  // );
 
   const handleFailure = (result) => {
     alert(result);
@@ -45,7 +45,7 @@ const SignIn = () => {
     });
 
     const data = await res.json();
-    setLoginData(data);
+    // setLoginData(data);
     localStorage.setItem("loginData", JSON.stringify(data));
   };
   //   const handleLogout = () => {
