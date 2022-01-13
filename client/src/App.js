@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Header from "components/header/Header";
+import Header from "components/Header";
 import HomeScreen from "components/screens/HomeScreen";
 import ProductScreen from "components/screens/ProductScreen";
 import "./App.css";
