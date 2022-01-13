@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import { OAuth2Client } from "google-auth-library";
 import userRouter from "./routers/user.js";
+import productsRouter from "./routers/products.js";
 
 dotenv.config();
 const client = new OAuth2Client(process.env.REACT_APP_GOOGLE_CLIENT_ID);
@@ -18,6 +19,7 @@ mongoose.connection.once("open", () => {
   console.log("conneted to database");
 });
 
+app.use("/api/products", productsRouter);
 app.use("/api/users", userRouter);
 
 app.use((err, req, res, next) => {

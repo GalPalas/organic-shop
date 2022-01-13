@@ -1,13 +1,12 @@
 import React from "react";
 import ProductCard from "components/product/ProductCard";
-import data from "../../data.js";
 
-const Home = () => {
+const HomeScreen = () => {
   return (
     <div className="container">
-      <ProductCard data={data} />
+      <ProductCard />
     </div>
   );
 };
 
-export default Home;
+export default HomeScreen;
