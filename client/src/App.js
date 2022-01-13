@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home from "pages/home/Home";
-import SignIn from "pages/signin/SignIn";
 import Header from "components/header/Header";
+import HomeScreen from "components/screens/HomeScreen";
+import ProductScreen from "components/screens/ProductScreen";
 import "./App.css";
 
 function App() {
@@ -10,8 +10,8 @@ function App() {
       <Header />
       <div className="App">
         <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/signin" element={<SignIn />}></Route>
+          <Route path="/product/:id" element={<ProductScreen />}></Route>
+          <Route path="/" element={<HomeScreen />}></Route>
         </Routes>
       </div>
     </Router>
