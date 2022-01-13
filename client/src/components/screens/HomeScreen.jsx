@@ -1,10 +1,10 @@
 import React from "react";
-import ProductCard from "components/product/ProductCard";
+import ProductsGrid from "components/ProductsGrid";
 
 const HomeScreen = () => {
   return (
     <div className="container">
-      <ProductCard />
+      <ProductsGrid />
     </div>
   );
 };
