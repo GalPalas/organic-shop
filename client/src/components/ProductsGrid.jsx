@@ -1,10 +1,18 @@
-import { useFecthProducts } from "components/hooks/useFecthProducts";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchProducts, productsInStore } from "components/store/productList";
 import Spinner from "components/shared/Spinner";
 import Categories from "components/Categories.jsx";
 import ProductCard from "components/ProductCard";
 
 const ProductsGrid = () => {
-  const { products, status } = useFecthProducts();
+  const dispatch = useDispatch();
+
+  const { products, status } = useSelector(productsInStore());
+
+  useEffect(() => {
+    dispatch(fetchProducts());
+  }, [dispatch]);
 
   return (
     <>

@@ -11,6 +11,8 @@ const ProductCard = ({ _id, imageUrl, name, price }) => {
       <div className="card-body p-0">
         <h5 className="card-title p-2">{name}</h5>
         <p className="card-text p-2">${price}</p>
+      </div>
+      <div className="card-footer p-0">
         <button href="/#" className="btn btn-primary w-100">
           Add to cart
         </button>
